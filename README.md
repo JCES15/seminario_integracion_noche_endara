@@ -1,1 +1,2 @@
-# seminario_integracion_noche_endara
+# Materia: Seminario Integrador
+## Alumno: Juam Carlos Endara
