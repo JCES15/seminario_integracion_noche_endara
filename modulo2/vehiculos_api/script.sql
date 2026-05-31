@@ -1,0 +1,17 @@
+CREATE USER rrhh_user WITH PASSWORD 'admin123';
+CREATE DATABASE rrhh_db OWNER rrhh_user;
+
+\c rrhh_db
+
+ALTER SCHEMA public OWNER TO rrhh_user;
+GRANT ALL ON SCHEMA public TO rrhh_user;
+GRANT CREATE ON SCHEMA public TO rrhh_user;
+
+ALTER DEFAULT PRIVILEGES FOR USER rrhh_user IN SCHEMA public
+GRANT ALL ON TABLES TO rrhh_user;
+
+ALTER DEFAULT PRIVILEGES FOR USER rrhh_user IN SCHEMA public
+GRANT ALL ON SEQUENCES TO rrhh_user;
+
+ALTER DEFAULT PRIVILEGES FOR USER rrhh_user IN SCHEMA public
+GRANT ALL ON FUNCTIONS TO rrhh_user;
