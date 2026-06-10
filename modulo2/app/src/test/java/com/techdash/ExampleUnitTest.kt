@@ -1,4 +1,4 @@
-package com.shoapp
+package com.techdash
 
 import org.junit.Test
 
