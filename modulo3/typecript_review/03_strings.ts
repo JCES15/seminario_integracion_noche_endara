@@ -14,4 +14,4 @@ console.log(nombre3.toUpperCase());      // ANA GARCÍA
 console.log(nombre3.toLowerCase());      // ana garcía
 console.log(nombre3.includes("García")); // true
 console.log(nombre3.split(" "));         // ["Ana", "García"]
-console.log(nombre4.split(" ,"));           // []
+console.log(nombre4.split(" ,"));           // ['Quito, 2026]

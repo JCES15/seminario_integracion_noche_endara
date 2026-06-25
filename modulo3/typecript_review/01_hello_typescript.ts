@@ -1,7 +1,7 @@
 // hola.ts
 
-const mensaje: string = "Hola desde TypeScript";
-const año: number = 2026;
+const mensaje1: string = "Hola desde TypeScript";
+const año5: number = 2026;
 
-console.log(mensaje);
-console.log(`El año es: ${año}`);
+console.log(mensaje1);
+console.log(`El año es: ${año5}`);
