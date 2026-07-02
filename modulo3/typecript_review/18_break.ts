@@ -1,4 +1,4 @@
-const paquetes: number[] = [64, 128, -1, 256, 1024, -1, 32];
+const paquetes: number [] = [64, 128, -1, 256, 1024, -1, 32];
 //                                  ↑              ↑   corruptos (negativos)
 
 // continue: ignora los corruptos pero sigue procesando

@@ -20,3 +20,6 @@ do {
 } while (!conectado && intentos < 5);
 
 console.log(conectado ? `Conectado en ${intentos} intentos` : "Falló");
+
+
+

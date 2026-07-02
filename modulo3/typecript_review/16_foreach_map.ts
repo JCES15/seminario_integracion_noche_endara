@@ -26,3 +26,6 @@ console.log(limpios);  // ["ana@mail.com", "luis@mail.com", "pepe@mail.com"]
 
 // forEach para reportar, map para transformar
 limpios.forEach((usuario, i) => console.log(`Usuario ${i + 1}: ${usuario}`));
+
+
+

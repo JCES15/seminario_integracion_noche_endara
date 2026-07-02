@@ -41,3 +41,16 @@ for (const item of carrito) {
   stotal15 += substotal15;
 }
 console.log(`stotal15: $${stotal15}`);  // stotal15: $730
+
+
+const temps = [18, 22, 25, 30, 19, 27];
+let  max =0;
+for (const temp of temps) {
+  if (temp > max){
+    max=temp
+  }
+  
+}
+
+
+console.log(max);
