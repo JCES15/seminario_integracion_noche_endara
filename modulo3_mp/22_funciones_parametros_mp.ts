@@ -1,0 +1,36 @@
+// Comparador de precios usando funciones con parámetros
+
+interface Producto {
+    nombre: string;
+    precio: number;
+}
+
+// Función con parámetros
+function compararPrecios(producto1: Producto, producto2: Producto): void {
+
+    console.log("===== COMPARADOR DE PRECIOS =====");
+    console.log(producto1.nombre + ": $" + producto1.precio);
+    console.log(producto2.nombre + ": $" + producto2.precio);
+
+    if (producto1.precio < producto2.precio) {
+        console.log("El producto más económico es: " + producto1.nombre);
+    } else if (producto2.precio < producto1.precio) {
+        console.log("El producto más económico es: " + producto2.nombre);
+    } else {
+        console.log("Ambos productos tienen el mismo precio.");
+    }
+}
+
+// Objetos
+const laptop: Producto = {
+    nombre: "Laptop",
+    precio: 950
+};
+
+const monitor: Producto = {
+    nombre: "Monitor",
+    precio: 320
+};
+
+// Llamada a la función
+compararPrecios(laptop, monitor);
