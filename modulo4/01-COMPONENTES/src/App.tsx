@@ -3,9 +3,21 @@
 import FetchUser from "./components/FetchUser"
 import FruitList from "./components/FruitList"
 import InlineEditor from "./components/InlineEditor"
+import RegistrationForm from "./components/RegistrationForm"
 import UserGreeting from "./components/UserGreeting"
 import WelcomeBanner from "./components/WelcomeBanner."
+import { useAuth } from "./contexts/AuthContext"
+import ThemeSelector from "./customHooks/ThemeSelector"
+import MemoizedList from "./useCallback/MemoizedList"
+import SearchWithFetch from "./useCallback/SearchWithFetch"
+import AppHeader from "./useContext/AppHeader"
+import LoginForm from "./useContext/LoginForm"
+import ThemeToggle from "./useContext/ThemeToggle"
+import UserBadge from "./useContext/UserBadge"
 import DocumentTitle from "./useEffect/DocumentTitle"
+import FilteredCatalog from "./useMemo/FilteredCatalog"
+import PrimeSieve from "./useMemo/PrimeSieve"
+import BasicCounter from "./useReducer/BasicCounter"
 import AutoFocusForm from "./useRef/AutoFocusForm"
 import DigitalCounter from "./useState/DigitalCounter"
 import TaskManager from "./useState/TaskManager"
@@ -30,7 +42,7 @@ import UserProfileForm from "./useState/UserProfileForm"
 // │  12  ProductCatalogList  — lista con renderizado condicional de items   │
 // │  13  UserProfileCard     — ejercicio: props complejas + rol             │
 // └──────────────────────────────────────────────────────────────────────────┘
-const PASO = 41
+const PASO = 90
 
 const fruits = [
   { name: 'Manzana', emoji: '🍎', calories: 52 },
@@ -46,6 +58,7 @@ const catalog = [
 ]
 
 export default function App() {
+  const { state } = useAuth()
   const content =
 
     PASO === 1 ? <WelcomeBanner /> :
@@ -121,6 +134,19 @@ export default function App() {
   PASO ===  18 ? <FetchUser/> : 
   PASO ===  40 ? <AutoFocusForm/> :
   PASO ===  41 ? <InlineEditor/> :
+
+  PASO ===  50 ? <BasicCounter /> :
+  PASO ===  51 ? <RegistrationForm /> :
+
+  PASO ===  60 ? <ThemeToggle /> :
+  PASO ===  61 ? <UserBadge /> :
+  PASO ===  62 ? <LoginForm /> :
+  PASO ===  63 ? <AppHeader /> :
+  PASO ===  70 ? <PrimeSieve/> :
+  PASO ===  71 ? <FilteredCatalog/> :
+  PASO ===  80 ? <MemoizedList/> :
+  PASO ===  81 ? <SearchWithFetch/> :
+  PASO ===  90 ? <ThemeSelector/> :
 
 
   <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>
